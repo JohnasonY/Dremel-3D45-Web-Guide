@@ -41,7 +41,7 @@ export const guideSteps = [
     description:
       "Install the Dremel DigiLab 3D Slicer software before preparing your model.",
     link: {
-      href: "https://www.dremel.com/gn/en/digilab/software",
+      href: "https://3pitech.com/pages/desktop-slicer-software",
       text: "Download Dremel DigiLab 3D Slicer",
       Icon: Download,
     },
