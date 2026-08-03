@@ -1,10 +1,10 @@
-import { GuideImage } from './GuideImage.jsx'
-import { ResourceLink } from './ResourceLink.jsx'
-import { Tip } from './Tip.jsx'
-import { VideoSlot } from './VideoSlot.jsx'
+import { GuideImage } from "./GuideImage.jsx";
+import { ResourceLink } from "./ResourceLink.jsx";
+import { Tip } from "./Tip.jsx";
+import { VideoSlot } from "./VideoSlot.jsx";
 
 export function StepCard({ step }) {
-  const { Icon } = step
+  const { Icon } = step;
 
   return (
     <article className="step-card">
@@ -21,8 +21,20 @@ export function StepCard({ step }) {
         {step.link ? <ResourceLink {...step.link} /> : null}
         {step.tip ? <Tip>{step.tip}</Tip> : null}
         {step.image ? <GuideImage {...step.image} /> : null}
-        {step.videoLabel ? <VideoSlot label={step.videoLabel} src={step.videoSrc} /> : null}
+        {step.video ? (
+          <>
+            <VideoSlot label={step.video.label} src={step.video.src} />
+            <a
+              className="video-source"
+              href={step.video.source.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {step.video.source.text}
+            </a>
+          </>
+        ) : null}
       </div>
     </article>
-  )
+  );
 }

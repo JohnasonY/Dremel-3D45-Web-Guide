@@ -31,21 +31,33 @@ export const guideSteps = [
         Click <strong>LEVEL</strong> on the printer screen.
       </>
     ),
-    videoLabel: "Leveling video",
-    videoSrc: levelingVideo,
+    video: {
+      label: "Leveling video",
+      src: levelingVideo,
+      source: {
+        href: "https://www.youtube.com/watch?v=VGBSVOaFj5Y",
+        text: "Source: Dremel Digilab 3D45 3D Printer: Getting Started",
+      },
+    },
   },
   {
     number: 3,
     Icon: Layers3,
     title: "3D File Preparation & Build",
     description:
-      "Install the Dremel DigiLab 3D Slicer software before preparing your model.",
+      "Install the Dremel DigiLab 3D Slicer software before preparing your model. The purpose of this step is to slice your model and convert your model file into 3D45 preferred files such as .gcode, .g3drem or .g ",
     link: {
       href: "https://3pitech.com/pages/desktop-slicer-software",
       text: "Download Dremel DigiLab 3D Slicer",
       Icon: Download,
     },
-    videoLabel: "3D file preparation video",
-    videoSrc: prepBuildVideo,
+    video: {
+      label: "3D file preparation video",
+      src: prepBuildVideo,
+      source: {
+        href: "https://www.youtube.com/watch?v=VGBSVOaFj5Y",
+        text: "Source: Dremel Digilab 3D45 3D Printer: Getting Started",
+      },
+    },
   },
 ];
