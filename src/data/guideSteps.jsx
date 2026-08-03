@@ -45,7 +45,7 @@ export const guideSteps = [
     Icon: Layers3,
     title: "3D File Preparation & Build",
     description:
-      "Install the Dremel DigiLab 3D Slicer software before preparing your model. The purpose of this step is to slice your model and convert your model file into 3D45 ready-to-print file such as .gcode, .g3drem or .g ",
+      "Install the Dremel DigiLab 3D Slicer software before preparing your model. The purpose of this step is to convert a 3D model file such as .stl, .obj, or .3mf into ready-to-print file such as .gcode, .g3drem or .g ",
     link: {
       href: "https://3pitech.com/pages/desktop-slicer-software",
       text: "Download Dremel DigiLab 3D Slicer",
