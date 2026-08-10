@@ -68,10 +68,12 @@ a {
 }
 
 .hero {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 520px);
+  gap: clamp(24px, 5vw, 64px);
   align-items: center;
   min-height: 38vh;
-  padding: clamp(32px, 6vw, 84px);
+  padding: clamp(20px, 3.5vw, 48px) clamp(32px, 6vw, 84px);
   border-bottom: 1px solid rgba(31, 38, 35, 0.12);
   background:
     radial-gradient(
@@ -84,6 +86,14 @@ a {
 
 .hero-copy {
   max-width: 820px;
+}
+
+.hero-printer {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  justify-self: end;
 }
 
 h1,
@@ -299,7 +309,13 @@ h2 span {
   }
 
   .hero {
+    grid-template-columns: 1fr;
     min-height: auto;
+  }
+
+  .hero-printer {
+    max-height: 260px;
+    justify-self: center;
   }
 
   .resource-link {
