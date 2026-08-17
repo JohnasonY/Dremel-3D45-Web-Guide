@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { useEffect, useState } from 'react'
 import { Navbar } from './components/Navbar.jsx'
 import { AboutPage } from './pages/AboutPage.jsx'
+import { FaqPage } from './pages/FaqPage.jsx'
 import { GuidePage } from './pages/GuidePage.jsx'
 import './styles.css'
 
@@ -22,10 +23,16 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  function renderPage() {
+    if (path === '/about') return <AboutPage />
+    if (path === '/faq') return <FaqPage />
+    return <GuidePage />
+  }
+
   return (
     <main className="guide-shell">
       <Navbar activePath={path} onNavigate={navigate} />
-      {path === '/about' ? <AboutPage /> : <GuidePage />}
+      {renderPage()}
     </main>
   )
 }

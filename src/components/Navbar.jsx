@@ -9,6 +9,13 @@ export function Navbar({ activePath, onNavigate }) {
         GUIDE
       </button>
       <button
+        className={activePath === "/faq" ? "is-active" : ""}
+        type="button"
+        onClick={() => onNavigate("/faq")}
+      >
+        FAQ
+      </button>
+      <button
         className={activePath === "/about" ? "is-active" : ""}
         type="button"
         onClick={() => onNavigate("/about")}

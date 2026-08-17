@@ -254,20 +254,63 @@ h2 span {
     #1f2623;
 }
 
-.about-page {
+.about-page,
+.faq-page {
   min-height: calc(100vh - 65px);
   padding: clamp(44px, 8vw, 96px) clamp(20px, 6vw, 84px);
   background: #fbf7ef;
 }
 
-.about-copy {
+.about-copy,
+.faq-copy {
   max-width: 760px;
 }
 
-.about-copy p {
+.about-copy p,
+.faq-copy p {
   color: #48504c;
   font-size: clamp(1.1rem, 2vw, 1.35rem);
   line-height: 1.6;
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.faq-card {
+  min-height: 190px;
+  padding: 20px;
+  border: 1px solid rgba(31, 38, 35, 0.12);
+  border-left: 5px solid #2f8f6b;
+  border-radius: 8px;
+  background: #fffaf0;
+  box-shadow: 0 10px 28px rgba(31, 38, 35, 0.08);
+}
+
+.faq-card h3 {
+  margin-bottom: 10px;
+  color: #1f2623;
+  font-size: 1.12rem;
+  line-height: 1.25;
+}
+
+.faq-card p {
+  margin: 0;
+  color: #35413c;
+  line-height: 1.55;
+}
+
+.faq-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 16px;
+  border: 1px solid rgba(31, 38, 35, 0.12);
+  border-radius: 6px;
+  object-fit: contain;
 }
 
 .author-card {
