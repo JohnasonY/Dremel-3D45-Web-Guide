@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { useEffect, useState } from 'react'
 import { Navbar } from './components/Navbar.jsx'
 import { AboutPage } from './pages/AboutPage.jsx'
+import { ExamplesPage } from './pages/ExamplesPage.jsx'
 import { FaqPage } from './pages/FaqPage.jsx'
 import { GuidePage } from './pages/GuidePage.jsx'
 import './styles.css'
@@ -25,6 +26,7 @@ function App() {
 
   function renderPage() {
     if (path === '/about') return <AboutPage />
+    if (path === '/examples') return <ExamplesPage />
     if (path === '/faq') return <FaqPage />
     return <GuidePage />
   }

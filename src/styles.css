@@ -255,55 +255,108 @@ h2 span {
 }
 
 .about-page,
-.faq-page {
+.faq-page,
+.examples-page {
   min-height: calc(100vh - 65px);
   padding: clamp(44px, 8vw, 96px) clamp(20px, 6vw, 84px);
   background: #fbf7ef;
 }
 
 .about-copy,
-.faq-copy {
+.faq-copy,
+.examples-copy {
   max-width: 760px;
 }
 
 .about-copy p,
-.faq-copy p {
+.faq-copy p,
+.examples-copy p {
   color: #48504c;
   font-size: clamp(1.1rem, 2vw, 1.35rem);
   line-height: 1.6;
 }
 
-.faq-list {
+.faq-list,
+.examples-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 16px;
   margin-top: 28px;
 }
 
-.faq-card {
+.examples-list {
+  grid-template-columns: 1fr;
+  max-width: 860px;
+}
+
+.faq-card,
+.example-card {
   min-height: 190px;
   padding: 20px;
   border: 1px solid rgba(31, 38, 35, 0.12);
-  border-left: 5px solid #2f8f6b;
+  border-left: 5px solid lightblue;
   border-radius: 8px;
   background: #fffaf0;
   box-shadow: 0 10px 28px rgba(31, 38, 35, 0.08);
 }
 
-.faq-card h3 {
+.example-card {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 20px;
+}
+
+.example-card-copy {
+  min-width: 0;
+}
+
+.example-card-heading {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.faq-card h3,
+.example-card h3 {
   margin-bottom: 10px;
   color: #1f2623;
   font-size: 1.12rem;
   line-height: 1.25;
 }
 
-.faq-card p {
+.example-card-heading h3 {
+  margin-bottom: 0;
+}
+
+.example-card a {
+  flex: 0 0 auto;
+  padding: 8px 10px;
+  border: 1px solid #1f2623;
+  border-radius: 6px;
+  background: #1f2623;
+  color: #fffaf0;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.faq-card p,
+.example-card p {
   margin: 0;
   color: #35413c;
   line-height: 1.55;
 }
 
-.faq-card img {
+.example-card strong {
+  display: block;
+  margin-top: 12px;
+  color: #1f2623;
+  line-height: 1.5;
+}
+
+.faq-card img,
+.example-card img {
   display: block;
   width: 100%;
   height: auto;
@@ -311,6 +364,44 @@ h2 span {
   border: 1px solid rgba(31, 38, 35, 0.12);
   border-radius: 6px;
   object-fit: contain;
+}
+
+.example-card img {
+  max-height: 160px;
+  margin-top: 0;
+  background: #f4f0e7;
+  object-fit: cover;
+}
+
+.example-settings {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0 0;
+}
+
+.example-settings div {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.35fr) minmax(0, 1fr);
+  gap: 12px;
+}
+
+.example-settings dt {
+  color: #68716d;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.example-settings dd {
+  margin: 0;
+  color: #35413c;
+  line-height: 1.45;
+}
+
+.example-note {
+  margin-top: 16px;
+  padding: 12px;
+  border-left: 4px solid #a54818;
+  background: #f8eadf;
 }
 
 .author-card {
@@ -364,6 +455,19 @@ h2 span {
   .resource-link {
     width: 100%;
     justify-content: space-between;
+  }
+
+  .example-card,
+  .example-settings div {
+    grid-template-columns: 1fr;
+  }
+
+  .example-card-heading {
+    display: grid;
+  }
+
+  .example-card a {
+    width: fit-content;
   }
 }
 

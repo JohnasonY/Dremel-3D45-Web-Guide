@@ -16,6 +16,13 @@ export function Navbar({ activePath, onNavigate }) {
         FAQ
       </button>
       <button
+        className={activePath === "/examples" ? "is-active" : ""}
+        type="button"
+        onClick={() => onNavigate("/examples")}
+      >
+        EXAMPLES
+      </button>
+      <button
         className={activePath === "/about" ? "is-active" : ""}
         type="button"
         onClick={() => onNavigate("/about")}
