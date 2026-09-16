@@ -1,4 +1,5 @@
 import bagClip from "../assets/examples/bagClip.png";
+import toothpasteSqueezer from "../assets/examples/toothpasteSqueezer.jpeg";
 
 const examples = [
   {
@@ -12,6 +13,17 @@ const examples = [
     },
     image: bagClip,
     note: "The latch is too tight, so I used a scrapper to cut out extra bump plastic of the latch",
+  },
+  {
+    title: "Toothpaste Tube Squeezer",
+    link: "https://www.printables.com/model/265248-ratchet-toothpaste-tube-squeezer",
+    material: "PETG",
+    description: "Don't waste leftover toothpaste!",
+    setting: {
+      "layer height": "0.2mm (medium quality)",
+      "nozzle gap": "0mm by default",
+    },
+    image: toothpasteSqueezer,
   },
 ];
 
